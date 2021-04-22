@@ -79,11 +79,11 @@ echo "[Set the ROS evironment]"
 # sh -c "echo \"alias cs='cd ~/$name_catkin_workspace/src'\" >> ~/.bashrc"
 # sh -c "echo \"alias cm='cd ~/$name_catkin_workspace && catkin_make'\" >> ~/.bashrc"
 
-sh -c "echo \"source /opt/ros/$name_ros_version/setup.bash\" >> ~/.bashrc"
-# sh -c "echo \"source ~/$name_catkin_workspace/devel/setup.bash\" >> ~/.bashrc"
+# sh -c "echo \"source /opt/ros/$name_ros_version/setup.bash\" >> ~/.bashrc"
+sh -c "echo \"source ~/$name_catkin_workspace/devel/setup.bash\" >> ~/.bashrc"
 
-# sh -c "echo \"export ROS_MASTER_URI=http://localhost:11311\" >> ~/.bashrc"
-# sh -c "echo \"export ROS_HOSTNAME=localhost\" >> ~/.bashrc"
+sh -c "echo \"export ROS_MASTER_URI=http://localhost:11311\" >> ~/.bashrc"
+sh -c "echo \"export ROS_HOSTNAME=localhost\" >> ~/.bashrc"
 
 source $HOME/.bashrc
 
