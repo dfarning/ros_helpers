@@ -57,6 +57,7 @@ echo "[Initialize rosdep]"
 if [ ! -e /etc/ros/rosdep/sources.list.d/20-default.list ]; then
   sudo sh -c "rosdep init"
 fi
+
 rosdep update
 
 echo "[Environment setup and getting rosinstall]"

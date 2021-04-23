@@ -17,8 +17,14 @@ name_os_version=${name_os_version:="bionic"}
 name_ros_version=${name_ros_version:="melodic"}
 name_catkin_workspace=${name_catkin_workspace:="autosim_ws"}
 
+cd $HOME/$name_catkin_workspace
+source $HOME/$name_catkin_workspace/devel/setup.bash
+
 cd $HOME/$name_catkin_workspace/src/range_libc/pywrapper
 ./compile.sh
 
 cd $HOME/$name_catkin_workspace
 catkin_make install
+
+mkdir -p $HOME/.gazebo/models/
+cp -r $HOME/$name_catkin_workspace/simulator/world/ $HOME/.gazebo/models/
